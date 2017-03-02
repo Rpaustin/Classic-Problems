@@ -22,6 +22,6 @@ function getMostFrequentInteger(data) {
 
 }
 
-var data = [1,1,2,2,3,3,3,3,300,-1,-1,-2,-2,-2,-2,-2,-2,4543];
+var data = [1,1,2,2,3,3,-2,-2,3,300,-1,-1,-2,-2,-2,-2,-2,-2,4543];
 
 console.log(getMostFrequentInteger(data));

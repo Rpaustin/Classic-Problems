@@ -24,6 +24,7 @@ exports.QHashSet = class QHashSet {
       this.set = [];
       this.val = 1;
       this.maxCount = 0;
+      this.maxKey = '';
     }
 
     // Set key and value as val (No specific value needed)
@@ -54,10 +55,15 @@ exports.QHashSet = class QHashSet {
       var theKeys = Object.keys(theSet);
 
       for(var i = 0; i < theKeys.length; i++) {
-          if(this.maxCount < theSet[theKeys[i]])
+          if(this.maxCount < theSet[theKeys[i]]) {
             this.maxCount = theSet[theKeys[i]];
+            this.maxKey = theKeys[i];
+          }
       }
 
-      return this.maxCount;
+      return {
+        'key' : this.maxKey,
+        'count' : this.maxCount
+      }
     }
 };
