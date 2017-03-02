@@ -18,10 +18,10 @@ function getMostFrequentInteger(data) {
     }
   }
 
-  integerSet.getMaxCount();
+  return integerSet.getMaxCount();
 
 }
 
-var data = [1,1,2,2,3,3,3,3,300];
+var data = [1,1,2,2,3,3,3,3,300,-1,-1,-2,-2,-2,-2,-2,-2,4543];
 
 console.log(getMostFrequentInteger(data));
