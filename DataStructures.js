@@ -37,7 +37,8 @@ exports.QHashSet = class QHashSet {
     contains(key) {
       return this.set[key] >= 1;
     }
-
+    
+    // Increment count of key
     increment(key) {
       if(this.contains(key))
         this.set[key]++;
@@ -67,3 +68,42 @@ exports.QHashSet = class QHashSet {
       }
     }
 };
+
+exports.BSTTreeNode = class TreeNode {
+  constructor(key) {
+    this.key = key;
+    this.leftChild = null;
+    this.rightChild = null;
+  }
+
+  getKey() {
+    return this.key;
+  }
+
+  getLeftChild() {
+    return this.leftChild;
+  }
+
+  getRightChild() {
+    return this.rightChild;
+  }
+
+  setLeftChild(NewChild) {
+    this.leftChild = newChild;
+  }
+
+  setRighthild(NewChild) {
+    this.rightChild = newChild;
+  }
+}
+
+exports.BinaryTree = class BinaryTree {
+  constructor(rootKey) {
+    this.root = new BSTTreeNode(rootKey);
+    this.leftSubTree = null;
+    this.rightSubTree = null;
+  }
+
+  
+
+}
